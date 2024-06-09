@@ -107,13 +107,22 @@
             </ul>
         </div>
 
-         <div class="video-section">
-            <h2>Video Presentation</h2>
-            <video width="600" controls>
-                <source src="inverted-pendulum.mp4" type="video/mp4">
+          <div class="video-section">
+            <h2>Video Presentations</h2>
+            <div class="video-dropdown">
+                <label for="videoSelect">Choose a video:</label>
+                <select id="videoSelect" onchange="showVideo()">
+                    <option value="">--Select a video--</option>
+                    <option value="video1.mp4">Video 1</option>
+                    <option value="video2.mp4">Video 2</option>
+                    <option value="video3.mp4">Video 3</option>
+                </select>
+            </div>
+            <video id="videoPlayer" width="600" controls>
+                <source src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
+          </div>
 
         <div class="section">
             <h2>Education</h2>
