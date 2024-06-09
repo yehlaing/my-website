@@ -53,7 +53,18 @@
             text-align: center;
             margin-bottom: 40px;
         }
+        .video-dropdown {
+            margin: 20px 0;
+        }
     </style>
+     <script>
+        function showVideo() {
+            var videoSelect = document.getElementById("videoSelect");
+            var videoPlayer = document.getElementById("videoPlayer");
+            var selectedVideo = videoSelect.options[videoSelect.selectedIndex].value;
+            videoPlayer.src = selectedVideo;
+        }
+    </script>
 </head>
 <body>
     <header>
