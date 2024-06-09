@@ -12,11 +12,25 @@
             background-color: #ECF0F1;
             color: #2C3E50;
         }
-        header {
+         header {
+            display: flex;
+            align-items: center;
             background-color: #2C3E50;
             color: #ECF0F1;
             padding: 20px;
+        }
+        .header-content {
+            flex: 2;
+            text-align: left;
+        }
+        .profile-photo-header {
+            flex: 1;
             text-align: center;
+        }
+        .profile-photo-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         .container {
             width: 80%;
@@ -35,27 +49,18 @@
             padding: 20px;
             text-align: center;
         }
-        .profile-photo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .profile-photo img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Ye Hlaing</h1>
-        <p>A dynamic and results-oriented professional with over 14 years of extensive experience in control and electrical engineering.</p>
-    </header>
-
-<div class="container">
-        <div class="profile-photo">
+        <div class="profile-photo-header">
             <img src="profile.jpg" alt="Ye Hlaing's Photo">
         </div>
+        <div class="header-content">
+            <h1>I am Ye Hlaing</h1>
+            <p>A dynamic and results-oriented control engineer.</p>
+        </div>
+    </header>
     
     <div class="container">
         <div class="section">
