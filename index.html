@@ -49,15 +49,26 @@
             padding: 20px;
             text-align: center;
         }
-        .video-section {
-            text-align: left;
+        .photo-section, .video-section {
+            text-align: center;
             margin-bottom: 40px;
         }
-        .video-dropdown {
+        .dropdown {
             margin: 20px 0;
+        }
+        img.display-photo {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
         }
     </style>
      <script>
+        function showPhoto() {
+            var photoSelect = document.getElementById("photoSelect");
+            var photoDisplay = document.getElementById("photoDisplay");
+            var selectedPhoto = photoSelect.options[photoSelect.selectedIndex].value;
+            photoDisplay.src = selectedPhoto;
+        }
         function showVideo() {
             var videoSelect = document.getElementById("videoSelect");
             var videoPlayer = document.getElementById("videoPlayer");
@@ -105,6 +116,20 @@
                 <li>Skilled in resource management, budgeting, risk mitigation, and promoting a safety culture.</li>
                 <li>Experienced in procurement processes and project management activities.</li>
             </ul>
+        </div>
+        
+         <div class="photo-section">
+            <h2>Photo Presentations</h2>
+            <div class="dropdown">
+                <label for="photoSelect">Choose a photo:</label>
+                <select id="photoSelect" onchange="showPhoto()">
+                    <option value="">--Select a photo--</option>
+                    <option value="photo1.jpg">Photo 1</option>
+                    <option value="photo2.jpg">Photo 2</option>
+                    <option value="photo3.jpg">Photo 3</option>
+                </select>
+            </div>
+            <img id="photoDisplay" class="display-photo" src="" alt="Selected Photo">
         </div>
 
           <div class="video-section">
